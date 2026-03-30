@@ -16,9 +16,9 @@ import progressRoutes from "./routes/progressRoutes.js";
 connectDB();
 
 const app = express();
-
-app.use("/uploads", express.static("uploads"));
+const cors = require("cors");
 app.use(cors());
+app.use("/uploads", express.static("uploads"));
 app.use(express.json());
 app.use("/api/resume", resumeRoutes);
 app.use("/api/ats", atsRoutes);
