@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import Root from "./components/Root";
 import Home from "./components/Home";
 import Login from "./components/auth/Login";
@@ -12,6 +12,7 @@ import AIInterview from "./components/modules/AIInterview";
 import GroupDiscussion from "./components/modules/GroupDiscussion";
 import CodingPlatform from "./components/modules/CodingPlatform";
 import ProgressDashboard from "./components/modules/ProgressDashboard";
+import MockTestRunner from "./components/modules/MockTestRunner"; // ← add this
 import ProtectedRoute from "../ProtectedRoute";
 
 export const router = createBrowserRouter([
@@ -34,6 +35,8 @@ export const router = createBrowserRouter([
           { path: "group-discussion", Component: GroupDiscussion },
           { path: "coding-platform", Component: CodingPlatform },
           { path: "progress", Component: ProgressDashboard },
+          { path: "mock-test/results", Component: ProgressDashboard },
+          { path: "mock-test/:testId", Component: MockTestRunner }, // ← new route
         ],
       },
       { path: "*", Component: Home },

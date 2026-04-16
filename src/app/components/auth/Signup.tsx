@@ -55,7 +55,7 @@ export default function Signup() {
             <Briefcase className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            PlacementPro
+            Recruitmate
           </h1>
           <p className="text-slate-600 mt-2">Start Your Journey to Success</p>
         </div>

@@ -7,13 +7,12 @@ import {
 
 const router = express.Router();
 
-// admin upload
 router.post("/upload", uploadMaterial);
 
-// student fetch
-router.get("/:category", getMaterials);
-
-// single
+// keep this FIRST
 router.get("/material/:id", getMaterialById);
+
+// then category
+router.get("/:category", getMaterials);
 
 export default router;
